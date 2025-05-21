@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp"
+            android:layout_marginTop="50dp">
+
+            <!-- Toolbar -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProfileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btnBack"
+                app:layout_constraintStart_toEndOf="@id/btnBack"
+                app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+            <Button
+                android:id="@+id/btnSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/support_button_bg"
+                android:drawableStart="@drawable/ic_support"
+                android:drawablePadding="8dp"
+                android:paddingHorizontal="16dp"
+                android:text="support"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Profile Section -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/profile_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="andaz Kumar"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/ivProfilePic"
+                app:layout_constraintTop_toTopOf="@id/ivProfilePic" />
+
+            <TextView
+                android:id="@+id/tvMemberSince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="member since Dec, 2020"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circle_button_bg"
+                android:contentDescription="Edit Profile"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivProfilePic" />
+
+            <!-- CRED Garage Section -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardGarage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/dark_gray"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@id/ivProfilePic">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <ImageView
+                        android:id="@+id/ivCar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_icon_bg"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_car"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvGarageTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="get to know your vehicles, inside out"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@id/ivGarageArrow"
+                        app:layout_constraintStart_toEndOf="@id/ivCar"
+                        app:layout_constraintTop_toTopOf="@id/ivCar" />
+
+                    <TextView
+                        android:id="@+id/tvGarageSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="CRED garage"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tvGarageTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvGarageTitle" />
+
+                    <ImageView
+                        android:id="@+id/ivGarageArrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Credit Score Section -->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/cardGarage" />
+
+            <ImageView
+                android:id="@+id/ivCreditScore"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_icon_bg"
+                android:padding="6dp"
+                android:src="@drawable/ic_credit_score"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <TextView
+                android:id="@+id/tvCreditScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="credit score"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivCreditScore"
+                app:layout_constraintStart_toEndOf="@id/ivCreditScore"
+                app:layout_constraintTop_toTopOf="@id/ivCreditScore" />
+
+            <TextView
+                android:id="@+id/tvRefreshAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="• REFRESH AVAILABLE"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvCreditScoreLabel"
+                app:layout_constraintStart_toEndOf="@id/tvCreditScoreLabel"
+                app:layout_constraintTop_toTopOf="@id/tvCreditScoreLabel" />
+
+            <TextView
+                android:id="@+id/tvCreditScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="757"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivCreditScore"
+                app:layout_constraintEnd_toStartOf="@id/ivCreditArrow"
+                app:layout_constraintTop_toTopOf="@id/ivCreditScore" />
+
+            <ImageView
+                android:id="@+id/ivCreditArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/ivCreditScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivCreditScore" />
+
+            <!-- Lifetime Cashback Section -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/ivCreditScore" />
+
+            <ImageView
+                android:id="@+id/ivCashback"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_icon_bg"
+                android:padding="6dp"
+                android:src="@drawable/ic_rupee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <TextView
+                android:id="@+id/tvCashbackLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="lifetime cashback"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivCashback"
+                app:layout_constraintStart_toEndOf="@id/ivCashback"
+                app:layout_constraintTop_toTopOf="@id/ivCashback" />
+
+            <TextView
+                android:id="@+id/tvCashbackAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="₹3"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivCashback"
+                app:layout_constraintEnd_toStartOf="@id/ivCashbackArrow"
+                app:layout_constraintTop_toTopOf="@id/ivCashback" />
+
+            <ImageView
+                android:id="@+id/ivCashbackArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/ivCashback"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivCashback" />
+
+            <!-- Bank Balance Section -->
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/ivCashback" />
+
+            <ImageView
+                android:id="@+id/ivBank"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/circle_icon_bg"
+                android:padding="6dp"
+                android:src="@drawable/ic_bank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <TextView
+                android:id="@+id/tvBankLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="bank balance"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBank"
+                app:layout_constraintStart_toEndOf="@id/ivBank"
+                app:layout_constraintTop_toTopOf="@id/ivBank" />
+
+            <TextView
+                android:id="@+id/tvCheckBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="check"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBank"
+                app:layout_constraintEnd_toStartOf="@id/ivBankArrow"
+                app:layout_constraintTop_toTopOf="@id/ivBank" />
+
+            <ImageView
+                android:id="@+id/ivBankArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/ivBank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivBank" />
+
+            <!-- Rewards & Benefits Header -->
+            <TextView
+                android:id="@+id/tvRewardsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="YOUR REWARDS &amp; BENEFITS"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBank" />
+
+            <!-- Cashback Balance Section -->
+            <TextView
+                android:id="@+id/tvCashbackBalanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="cashback balance"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRewardsHeader" />
+
+            <TextView
+                android:id="@+id/tvCashbackBalanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvCashbackBalanceLabel"
+                app:layout_constraintEnd_toStartOf="@id/ivCashbackBalanceArrow"
+                app:layout_constraintTop_toTopOf="@id/tvCashbackBalanceLabel" />
+
+            <ImageView
+                android:id="@+id/ivCashbackBalanceArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/tvCashbackBalanceLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvCashbackBalanceLabel" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvCashbackBalanceLabel" />
+
+            <!-- Coins Section -->
+            <TextView
+                android:id="@+id/tvCoinsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="coins"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+            <TextView
+                android:id="@+id/tvCoinsAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26,46,583"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvCoinsLabel"
+                app:layout_constraintEnd_toStartOf="@id/ivCoinsArrow"
+                app:layout_constraintTop_toTopOf="@id/tvCoinsLabel" />
+
+            <ImageView
+                android:id="@+id/ivCoinsArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/tvCoinsLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvCoinsLabel" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvCoinsLabel" />
+
+            <!-- Referral Section -->
+            <TextView
+                android:id="@+id/tvReferLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="win upto Rs 1000"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+            <TextView
+                android:id="@+id/tvReferSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="refer and earn"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvReferLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvReferLabel" />
+
+            <ImageView
+                android:id="@+id/ivReferArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/tvReferSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvReferLabel" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvReferSubtitle" />
+
+            <!-- Transactions & Support Header -->
+            <TextView
+                android:id="@+id/tvTransactionsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="TRANSACTIONS &amp; SUPPORT"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider6" />
+
+            <!-- All Transactions Section -->
+            <TextView
+                android:id="@+id/tvAllTransactionsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="all transactions"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTransactionsHeader" />
+
+            <ImageView
+                android:id="@+id/ivAllTransactionsArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/tvAllTransactionsLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAllTransactionsLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
