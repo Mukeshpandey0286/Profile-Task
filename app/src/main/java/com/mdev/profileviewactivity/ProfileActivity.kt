@@ -87,8 +87,6 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun loadUserData() {
-        // In a real app, this data would come from an API or local database
-        // For this implementation, we'll hardcode the values as seen in the screenshot
 
         // User profile info
         binding.tvName.text = "andaz Kumar"
@@ -108,9 +106,6 @@ class ProfileActivity : AppCompatActivity() {
 
         // Coins amount
         binding.tvCoinsAmount.text = "26,46,583"
-
-        // Load profile image (in a real app, this would use Glide or similar)
-        // For this implementation, we're using a placeholder in the layout XML
     }
 
     private fun showToast(message: String) {
