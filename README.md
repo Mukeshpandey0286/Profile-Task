@@ -1,7 +1,5 @@
 <h1 align="center" id="title">Profile Activity UI Implementation</h1>
 
-<p align="center"><img src="https://ibb.co/2wwz22y" alt="project-image"></p>
-
 <p id="description">This is an implementation of the profile activity screen UI assignment. The app is built using Kotlin and XML as requested following modern Android development practices with ViewBinding.</p>
 
 <h2>🚀 Demo</h2>
@@ -10,7 +8,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://ibb.co/2wwz22y" alt="project-screenshot" width="300" height="300/">
+<img src="https://github.com/Mukeshpandey0286/Profile-Task/blob/master/IMG-20250521-WA0006.jpg" alt="project-screenshot" width="300" height="300/">
 
   
   
